@@ -3,7 +3,7 @@
 
 
 # Official Demo <a href="https://garudaframeworkpro.lamhotsimamora.com/">click</a>    
-# Official Documentation <a href="https://garudaframeworkpro.lamhotsimamora.com/dokumentasi/">click</a>   
+# Official Documentation <a href="https://lamhotsimamora.github.io/Garuda-Framework-Professional-Edition/dokumentasi/index.html">click</a>   
 # Official Download Source Code <a href="https://www.downloadgf.lamhotsimamora.com/">click</a>   
 
 ---------------------------------------------------------------
