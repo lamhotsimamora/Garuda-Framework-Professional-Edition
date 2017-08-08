@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <title>Dokumentasi Garuda Framework Pro Edition 5.0</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stroke.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+
+    <!-- CUSTOM -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div class="container">
+
+            <section id="top" class="section docs-heading">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="big-title text-center">
+                            <h1>Dokumentasi Garuda Framework Pro Edition</h1>
+                            <p class="lead">Stable Version 5.0</p>
+                        </div>
+                        <!-- end title -->
+                    </div>
+                    <!-- end 12 -->
+                </div>
+                <!-- end row -->
+
+                <hr>
+
+            </section>
+            <!-- end section -->
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
+                        <ul class="nav">
+                            <li><a href="#line0">1. Pendahuluan</a></li>
+                            <li><a href="#line1">2. Getting Started</a></li>
+                            <li><a href="#line2">3. Konfigurasi Framework</a></li>
+                            <li><a href="#line3">4. Cara membuat Router</a></li>
+                            <li><a href="#line4">5. Cara membuat Model</a></li>
+                            <li><a href="#line5">6. Cara membuat Controller</a></li>
+                            <li><a href="#line6">7. Cara membuat View</a></li>
+                            <li><a href="#line7">8. Name Space Framework</a></li>
+                            <li><a href="#line8">9. Library</a></li>
+                            <li><a href="#line9">10. Tambahan</a></li>
+                        
+                        </ul>
+                    </nav >
+                </div>
+                <div class="col-md-9">
+                    <section class="welcome" id="line0">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">1. Pendahuluan<hr></h2>
+                                <div class="row">
+
+                                    <div class="col-md-12 full">
+                                        <div class="intro">
+                                             <ul>
+                                                <li><strong>Name              : Garuda Framework Professional Edition</strong></li>
+                                                <li><strong>Version           : 5.0 (Stable) </strong> </li>
+                                                <li><strong>Realease Date     : 1 Juli 2017</strong>                                        </li>
+                                                <li><strong>Author            : </strong> <a href="https://lamhotsimamora.com" target="_blank">Lamhot Simamora</a></li>
+                                                <li><strong>Email             : lamhotsimamora36@gmail.com </strong>
+                                                <li><strong>Web                : <a href="https://lamhotsimamora.com" target="_blank">www.lamhotsimamora.com</a></strong>
+                                                <li><strong>Github             :        </strong> <a href="https://github.com/lamhotsimamora" target="_blank">lamhotsimamora</a></li>
+                                                <li><strong>Akun Instagram     : <a href="https://www.instagram.com/lamhottt/" target="_blank">instagram.com/lamhottt</a></strong></li>
+                                                <li><strong>Akun LinkIn        : <a href="https://www.linkedin.com/in/lamhot-simamora-757a26118/">https://www.linkedin.com/in/lamhot-simamora-757a26118/</a></strong></li>
+                                                <li><strong>Akun Paypal        : <a href="https://www.paypal.me/lamhotsimamora" target="_blank">paypal.me/lamhotsimamora</a></strong></li>
+                                                <li><strong>License            : GNU AFFERO GENERAL PUBLIC LICENSE</strong></li>
+                                                
+                                            </ul>
+                                        </div>
+
+                                        <hr>
+                                        <div>
+                                            <p>Pertama kali saya ucapkan terima kasih kepada Tuhan YME, karena saya dapat menyelesaikan Garuda Framework Pro Edition PHP ini.
+                                            Awal tujuan membuat framework ini adalah untuk kebutuhan pribadi saya agar dapat mempermudah saya dalam mengerjakan project website.</p>
+                                          <p>
+                                            Framework ini hampir mendekati sempurna, dan sudah dapat membantu 60% pengerjaan sebuah app website. 
+                                            Framework ini membutuhkan sedikit pengetahuan tentang OOP agar dapat digunakan dengan maksimal
+                                            
+                                             Contoh website yang sudah saya buat dengan menggunakan
+                                            GF Pro ini yaitu <a href="https://www.chat.lamhotsimamora.com/login" target="_blank">Room Chat</a> dan <a href="https://s.lamhotsimamora.com/" target="_blank">Generator Short URL</a></p>
+                          
+                                               <p>Berikut adalah Kebutuhan Sistem yang diperlukan : </p>          
+                                            <h4>System Requirements</h4>
+                                           
+                                        
+
+                                            <div class="intro2 clearfix">
+                                                 <p>
+                                                  <li>Segelas Susu / Secangkir Kopi, atau Teh Gelas </li>
+                                                  <li>Server Lokal Seperti Xampp atau Wamp Server</li>
+                                                  <li>Bahasa pemograman yang digunakan -> Minimal Menggunakan PHP 7.0 atau 7.1 (Rekomendasi)</li>
+                                                  <li>Contoh Database Yang Digunakan Maria DB</li>
+                                                  <li>Browser bisa menggunakan Chrome / Firefox / atau dll </li>
+                                                  <li>Editor bisa menggunakan Notepad++/ Sublime Text / VSCode / Atom / Vim / atau dll</li>
+                                                </p>
+                                            </div>
+                                             <code>
+                                              Catatan : "Jika anda masih menggunakan versi PHP lama atau < 7.0 ,
+                                              Maka segera UPDATE terlebih dahulu versi PHP anda dengan versi yang terbaru pada saat ini, jika tidak maka kemungkinan framework ini tidak berjalan atau ERROR"
+                                            </code>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- end row -->
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line1" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">2. Getting Started <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                            <ul>
+                              <li>
+                                1. Extract file master yang telah anda download, kemudian copy kedalam folder project "htdocs" anda, beri nama folder "GF" atau "Apapun"
+                              </li>
+                              <li>
+                                2. Kemudian buat database dengan nama "db_gf" (hanya untuk sebagai sample), lalu import data file .mysql (disertakan) kedalam database, pastikan konfigurasi server anda seperti dibawah ini
+                              </li>
+                             
+                           
+                               
+                                 <div class="intro2 clearfix">
+                                      <li> Server   : localhost</li>
+                                      <li> Database : db_gf    </li>
+                                      <li> Username : root     </li>
+                                      <li> Password :          </li>
+                                  </div>
+                                      </br>
+                                    <code>Konfigurasi informasi database server dapat dilihat
+                                      pada file "app/config.php" array => $config_database , atau lihat cara mengubah informasi database server
+                                      <a href="#line-config-database">di sini </a></code>
+                                <li>
+                                3. Jalankan pada browser 'localhost/nama_direktori/'
+                              </li>
+                                 </ul>
+                              <hr>
+                                <ul>
+                                     Penjelasan Sedikit Mengenai Router, Controller, Model, dan View di GF Pro
+                                    <li>1. Router , adalah pusat kontrol untuk mengatur parameter URL</li>
+                                    <li>2. Controller, digunakan untuk membuat rules atau modul </li>
+                                    <li>3. Model, digunakan untuk mengelola data kedatabase</li>
+                                    <li>4. View, sebagai output akhir (HTML)</li>
+                                </ul>
+                                <hr>
+                                  
+                                <img src="flow.png" alt="" class="col-md-12" width="500" height="500">
+                            
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line2" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">3. Konfigurasi Framework<a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                      <div class="intro2 clearfix"> 
+                      <p>1. Konfigurasi Bagian Pertama Terletak Pada File <font color="black">'system/GF_Production.php'</font></p>
+                      </div>
+                         
+
+                         <pre class="brush: html">
+
+                        return $app_production = array(
+                          'maintenance'     => false,
+                          'file_maintenance'  => 'maintenance',
+                          'notice_error'    => true,
+                          'time_zone'       => 'Asia/Jakarta',
+                          'uri_parameter'   => 'p',
+                          'start_benchmark'   => true);
+
+                        </pre>
+                          <ul>
+                              <li> Line 2 : Untuk membuat website maintenance, false = maintenance , true = normal </li>
+                              <li> Line 3 : Untuk memberitau nama file maintenance yang terletak pada <font color="red">"app/view/error/maintenance.html"</font></li>
+                              <li> Line 4 : Untuk mengaktifkan notice error PHP , true = aktif, false = tidak</li>
+                              <li> Line 5 : Untuk mengatur zona waktu yang digunakan default "Asia/Jakarta"</li>
+            
+                              <li> Line 6 : Untuk membuat parameter uri dengan nama 'p', jika ingin mengganti nilai parameter ini, maka anda harus mengganti nilai di htaccess pula
+
+                                   -> <font color="black"> RewriteRule ^(.+)$ index.php?<font color="red">p</font> =$1 [QSA,L] </font> </li>
+                                  <pre class="brush: html">
+                                      RewriteEngine On
+                                      #RewriteCond %{HTTPS} !on
+                                      #RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+                                      RewriteCond %{REQUEST_FILENAME} !-f
+                                      RewriteCond %{REQUEST_FILENAME} !-d
+                                      # ganti dibagian ini
+                                      RewriteRule ^(.+)$ index.php?p=$1 [QSA,L]
+                                  </pre>
+                             
+                              <li> Line 7 -> Untuk mengaktifkan function _startMicroTime(); , untuk mengukur speed aplikasi</li>
+                        </ul>
+                        <hr>
+
+                        <hr>
+                         <div class="intro2 clearfix"> 
+                      <p>2. Konfigurasi Bagian Kedua Terletak Pada File <font color="black">'app/config/config.php'</font></p>
+                      </div>
+                       
+            </br>
+                        <ul>
+                          <li>  a). Konfigurasi <font color="red">'class_database'</font> dan <font color="red">'database_use'</font> , secara default, driver/class database yang digunakan adalah mysqli, dan database yang digunakan adalah mysql atau maria db</li>
+                         <code>
+                            Jika anda ingin menggunakan PDO ,  DNS database yang tersedia di framework ini hanya tersedia untuk MySql,
+                            untuk DNS database microsoft access, sqlite, sql server, dan oracle , anda harus mencari sendiri. Dan di framework ini saya rekomendasikan menggunakan MySqli
+                         </code>
+                              <pre class="brush: html">
+                                    $class_database    = array('mysqli','pdo');
+
+                                    $database_use      = array('mysql','microsoft_access','sqlite','sql_server','oracle');
+                              </pre>
+                         
+                          <li> b). Konfigurasi selanjutnya yaitu</li>
+                              <pre class="brush: html">
+
+                               $config_app     = array(
+                                                        'run_database'      =>  true,
+                                                        'multi_language'    =>  true,
+                                                        'class_database'    =>  $class_database[0],
+                                                        'database_use'      =>  $database_use[0]
+                                                                                                );
+                              </pre>
+                              <li> Line 2 : Untuk mengaktifkan database, true = aktif, false = tidak </li>
+                              <li> Line 3 : Untuk mengaktifkan multi_language dengan menggunakan cookie, true = multi language, false = tidak</li>
+                              <li> Line 4 : Untuk memilih class database yang digunakan, default -> <font color="red">$class_datbase[0] = mysqli</font></li>
+                              <li> Line 5 : Untuk memilih database yang digunakan, default -> <font color="red">$database_use[0] = mysql</font></li>
+                          
+                        </ul>
+                     
+                      c). Konfigurasi selanjutnya yaitu informasi database server
+                     
+                             <section id="line-config-database">
+
+                            <pre class="brush: html">
+                                  $config_database  = array(
+                                                    'server_name'    => 'localhost',
+                                                    'user_name'      => 'root',
+                                                    'database_name'  => 'db_gf',
+                                                    'password'       => ''
+                                                                           );
+                            </pre>
+                             <p> d). Konfigurasi selanjutnya yaitu, jika mengaktifkan <font color="red">multi_languange</font>, secara default maka bahasa yang terpilih adalah 'ind'
+                            pada bagian 'default_value_languange' </p>
+                             <pre class="brush: html">
+                                $language_name     = array(
+                                'ind',
+                                'eng',
+                                );
+
+
+                                $language_data  = array(
+                                'indonesia',
+                                'english',
+                                );
+
+                                $cookie_config      = array(
+                                      'name_language_cookie'     =>'app-language-GF',
+                                      'default_value_language'   => $language_name[0]);
+                              </pre>
+                              <li> Line 1 : $language_name adalah key untuk membuat cookie multi language, jika anda ingin menambahkan bahasa lain maka harus menambahkan nilai di $language_data </li>
+                              <li> Line 7 : $language_data adalah nama file yang akan dituju, yang terletak pada <font color="red">'app/config/language/contoh.php'</font></li>
+                              <li> Line 12 : $cookie_config adalah nama dari cookie untuk multi language, serta default valuenya, sebagai contoh , nama multi language cookienya adalah 'app-language-GF' dan
+                              default valuenya adalah 'ind'</li>
+                        
+                            <hr>
+                         
+                            <p>e). Konfigurasi selanjutnya yaitu , mengatur file LIBRARY yang akan digunakan
+                            , Secara default library yang tersedia yaitu PHP Mailer, PHPQrCode, Fpdf, dan Mobile Detect</p>
+
+                            <pre class="brush: html">
+                           $_library_app      = array(
+                                                'phpmailer/PHPMailerAutoload',
+                                                'phpqrcode/qrlib',
+                                                'fpdf/fpdf',
+                                                'Mobile_Detect/Mobile_Detect',
+                                                'captcha/sys'
+                                                                );
+                            </pre>
+                            Untuk menambahkan library baru anda harus membuat folder didalam <font color="red">"app/library/nama_folder/"</font>, Kemudian tambahkan
+                            kedalam array diatas, <font color="red">"nama_folder/nama_file"</font>.
+                          
+                            <hr>
+                         
+                            <p>f). Konfigurasi selanjutnya yaitu , mengatur file HELPER yang akan digunakan
+                            , Secara default helper yang tersedia yaitu 'MyHelper', isi dari helper bisa digunakan untuk membuat function-function
+                             yang anda butuhkan dalam pembuatan website</p>
+
+                            <pre class="brush: html">
+                            $_helper_app    = array('MyHelper');
+                            </pre>
+                            Isi array diatas adalah nama dari file helper pada <font color="red">"app/helper/nama_helper.php"</font>.
+                        
+                          <hr>
+                         
+                            <p>g). Konfigurasi selanjutnya yaitu , mengatur file ROUTER yang akan digunakan
+                            , Untuk file router yang tersedia hanya sebagai contoh</p>
+
+                            <pre class="brush: html">
+                            $_router_app    = array(
+                                                    'Router-Satu','Router-Dua','Router-Tiga'
+                                                    ,'Router-Empat','Router-Lima','Router-Enam'
+                                                    ,'Router-Tujuh','Router-Delapan','Router-Sembilan'
+                                                    ,'Router-Sepuluh'
+                                                    );
+
+                            </pre>
+                            Isi array diatas adalah nama dari file router pada <font color="red">"app/router/nama_router.php"</font>.
+                        
+                            <hr>
+                         
+                            <p>h). Konfigurasi selanjutnya yaitu , mengatur file Controller yang akan digunakan
+                            , Untuk file controller yang tersedia hanya sebagai contoh</p>
+
+                            <pre class="brush: html">
+                              $_controller_app  = array('Controller-Satu');
+
+                            </pre>
+                            Isi array diatas adalah nama dari file controller pada <font color="red">"app/controller/nama_controller.php"</font>.
+                        
+                         
+                            <p>i). Konfigurasi selanjutnya yaitu , mengatur file Model yang akan digunakan
+                            , Untuk file Model yang tersedia hanya sebagai contoh</p>
+
+                            <pre class="brush: html">
+                              $_model_app     = array('Model-Satu','Model-Dua',"Model-Tiga","Model-Empat");
+                            </pre>
+                            Isi array diatas adalah nama dari file model pada <font color="red">"app/model/nama_model.php"</font>.
+                          
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line3" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">4. Cara Membuat Router<a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                       
+                        <p><h4>Hal yang harus dibuat untuk membuat router adalah, mendeklarasikan name space
+                          <font color="green">'use System/GF_Router as GF'</font> , GF dapat anda ganti sesuai dengan yang anda inginkan </h4>
+                        Untuk Route dibaca sesuai urutan dari paling atas kebawah, jika ada dua nama Route yang sama , maka yang dieksekusi adalah Route yang pertama,
+                        Paremeter URL selalu pada bagian pertama contoh 
+                         <strong>
+                        <i>
+                          Route("Parameter URL","File View atau Callback Function")</i> </strong></p>
+
+                         <pre class="brush: html">
+                                // Name space untuk Router
+                                use System\GF_Router as GF;
+                                </pre>
+
+                                Pada awal Route selalu sertakan Route kosong , untuk mengatur halaman default dialihkan ke "...", sebagai contoh
+                                <pre class="brush: html">
+                                  GF::Route("","home");
+                                </pre>
+
+                                Maka ketika mengunjungi <font color="blue">locahost/GF/</font> secara otomatis akan mengalihkan kehalaman <font color="red">"app/view/home.php"</font>
+                                , atau
+                                <pre class="brush: html">
+                                  GF::Route("",function(){
+                                      echo "Hello World";
+                                  });
+                                </pre>
+
+                                <hr>
+                                Untuk membuat halaman home, <font color="blue">'localhost/GF/home' </font>, seperti berikut :
+
+                                <pre class="brush: html">
+                                 GF::Route("Home");
+                                </pre>
+                                Maka secara otomatis akan mengalihkan kehalaman <font color="red">"app/view/home.php"</font>
+                                <hr>
+                                Untuk membuat halaman home, <font color="blue">'localhost/GF/home' </font>, dengan mengalihkan ke view yang berbeda
+                                seperti berikut :
+
+                                <pre class="brush: html">
+                                 GF::Route("Home","change-home");
+                                </pre>
+                                  Maka secara otomatis akan mengalihkan kehalaman <font color="red">"app/view/change-home.php"</font>
+
+                                <hr>
+                                Atau mengalihkan view didalam folder 'user', contoh <br>
+                                <pre class="brush: html">
+                                 GF::Route("Home","user/home");
+                                </pre>
+                                Maka secara otomatis akan mengalihkan kehalaman <font color="red">"app/view/user/home.php"</font><br>
+                                Atau bisa menggunakan callback function, contoh
+                                <pre class="brush: html">
+                                 GF::Route("Home",function(){
+                                    // logic here...
+
+                                    GF::setView("home");
+                                 });
+                                </pre>
+
+                                Untuk membuat view di callback function dapat dilihat pada line 4 diatas. </br>
+                                Contoh lainnya
+                                <pre class="brush: html">
+                                 GF::Route("Home","user/home",function(){
+                                    // logic here...
+
+                                    GF::setView("home");
+                                 });
+                                </pre>
+                                <hr>
+                                Untuk mengekstrak variabel kedalam view dengan 1 data array, sebagai contoh seperti berikut ini
+                                <pre class="brush: html">
+
+                                GF::Route("Home",function(){
+
+                                    $result['username'] = "Garuda Framework";
+                                    $result['email'] = "Garuda@Framework.com";
+                                    GF::setView("home",$result);
+                                });  </pre>
+                                Maka pada view home, array $result akan menjadi variabel $username, dan $email </br>
+                                Atau mengekstrak 2 data array, sebagai contoh seperti berikut ini
+                                <pre class="brush: html">
+
+                                GF::Route("Home",function(){
+
+                                    $result['username'] = "Garuda Framework";
+                                    $result['email'] = "Garuda@Framework.com";
+
+                                    $data['id_user'] = "12";
+                                    GF::setView("home",$result,$data);
+                                });  </pre>
+                                Maka pada view home, array $result akan menjadi variabel $username, $email, dan $id_user
+                                <p>
+                                  Untuk membuat pretty GET ->    <font color="blue"> "localhost/GF/post/a/b/c/d"</font>
+                                  Gunakan tanda { } atau tanda # untuk mempercantik parameter. </br>
+                                   Jumlah maksimum parameter adalah 11 -> a / b / c / d / e / f / g / h / i / j / k , Contoh kode :
+                                </p>
+                                 <pre class="brush: html">
+                                  GF::Route("post/{ a }/{ b }/{ c }/{ d }",function($get){
+                                    $a = $get['a'] ?? false;
+                                    $b = $get['b'] ?? false;
+                                    $c = $get['c'] ?? false;
+                                    $d = $get['d'] ?? false;
+
+                                    //  alihkan ke halaman view
+                                    GF::setView("post",$get);
+                                  });
+                                </pre>
+                                atau
+                                <pre class="brush: html">
+                                  GF::Route("post/# a #/# b #/# c #/# d #",function($get){
+                                    $a = $get['a'] ?? false;
+                                    $b = $get['b'] ?? false;
+                                    $c = $get['c'] ?? false;
+                                    $d = $get['d'] ?? false;
+
+                                    //  alihkan ke halaman view
+                                    GF::setView("post",$get);
+                                  });
+                                </pre>
+                                  <p>
+                                Parameter yang dibuat akan dikembalikan dalam bentuk array.
+                              </p>
+                                <p>Jika anda ingin menggunakan GET PHP seperti biasanya
+                                    <font color="blue">http://localhost/GF/get-biasa&nama=contoh</font>,  bisa dengan seperti ini
+                                  </p>
+                      <pre class="brush: html">
+                                        GF::Route("get-biasa",function(){
+                                              $nama = $_GET['nama'] ?? false;
+                                              echo $nama;
+                                        });
+                                  </pre>
+                                  atau dengan POST PHP seperti biasanya
+                                  <pre class="brush: html">
+                                        GF::Route("post-biasa",function(){
+                                          $nama = $_POST['nama'] ?? false;
+                                          echo $nama;
+                                        });
+                                  </pre>
+                                  <hr>
+                                  Dan yang terakhir yaitu RouteToOne, berfungsi untuk membuat satu parameter dinamis seperti www.url.com/username,
+                                  sehingga username dapat berubah-ubah. Gunakan method ini di AKHIR file Router yang ada, sehingga function RouteToOne tidak di eksekusi diawal.
+                                   (Lihat contoh di Router-Sembilan)
+                                   <pre class="brush: html">
+                                        GF::RouteToOne("username",function($username){
+                                               echo $username;
+                                        });
+                                  </pre>
+                              </br>
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line4" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">5. Cara Membuat Model<a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                             <p>Untuk membuat model , buat terlebih dahulu sebuah Class lalu extends dengan elDB
+                          </p>
+                        <pre class="brush: html">
+                            class Contoh extends elDB
+                            {
+                                function __construct()
+                                {
+                                  # code...
+                                }
+                            }
+                          </pre>
+                           <p>Untuk mendapatkan jumlah data gunakan method getCount(), sebagai contoh</p>
+                          <pre class="brush: html">
+                              public function countData(){
+                                  $this->setQuery("select id_user,username,email,pass from t_user");
+                                  $result = $this->getCount();
+                                  return $result;
+                              }
+                          </pre>
+                          <hr>
+                          <div class="intro2 clearfix">
+                            <p>Berikut ini adalah cara untuk mengelola data kedatabase menggunakan MySQLI </p>
+                         
+                        </div>
+                        <p>Untuk mengecheck id dari tabel gunakan method checkId(),sebagai contoh</p>
+                          <pre class="brush: html">
+                          public function getId(){
+                            $result  = $this->checkId("nama kolom","nama tabel","colom primary key","value primary key");
+                            return $result ? true : false;
+                          }
+                          </pre>
+                          <p> Untuk mendapatkan seluruh data gunakan method getAllData(), sebagai contoh</p>
+                            <pre class="brush: html">
+                           private function $data = array();
+                           public function getAll()
+                           {
+                             $this->setQuery("select id_user,username,email,pass from t_user order by id_user asc");
+
+                             $this->getAllData();
+                             // return array
+                             return self::$store_data;
+                           }
+                          </pre>
+                          <p> Untuk insert data dapat menggunakan method insert(), sebagai contoh</p>
+                           <pre class="brush: html">
+                                    public function insertData()
+                                    {
+
+                                      $result = $this->insert("nama_tabel","kolom 1","value kolom 1",
+                                                                           "kolom 2","value kolom 2",
+                                                                           "kolom 3","value kolom 3" );
+                                      return $result ? true : false;
+                                    }
+                          </pre>
+                          <p>  Untuk insert data batas 9 kolom dan 9 value</p>
+                          <pre class="brush: html">
+                                $result = $this->insert("nama_tabel","kolom 1","value kolom 1"
+                                                                    ,"kolom 2","value kolom 2"
+                                                                    ,"kolom 3","value kolom 3"
+                                                                    ,"kolom 4","value kolom 4"
+                                                                    ,"kolom 5","value kolom 5"
+                                                                    ,"kolom 6","value kolom 6"
+                                                                    ,"kolom 7","value kolom 7"
+                                                                    ,"kolom 8","value kolom 8"
+                                                                    ,"kolom 9","value kolom 9" );
+                          </pre>
+                          <p> Untuk update date dapat menggunakan method update(), sebagai contoh</p>
+                           <pre class="brush: html">
+                          public function updateData(){
+                                  $result_value = $this->checkId("kolom primary key","nama_tabel","where kolom","value kolom");
+                                  if (! $result_value){ return false && exit; }
+
+                                  $result = $this->update("t_user","id_user",$this->id_user
+                                                ,"username",$this->username
+                                                ,"email"    ,$this->email
+                                                ,"pass"     , $this->password);
+
+                                  return $result ? true : false;
+                            }
+                          </pre>
+                          <p>Untuk update data batas 9 kolom dan 9 value</p>
+                           <pre class="brush: html">
+                            $result = $this->update("nama_tabel","kolom primary key","value primary key"
+                                                                ,"kolom 1 " , "value kolom 1 "
+                                                                ,"kolom 2 " , "value kolom 2 "
+                                                                ,"kolom 3 " , "value kolom 3 "
+                                                                ,"kolom 4 " , "value kolom 4 "
+                                                                ,"kolom 5 " , "value kolom 5 "
+                                                                ,"kolom 6 " , "value kolom 6 "
+                                                                ,"kolom 7 " , "value kolom 7 "
+                                                                ,"kolom 8 " , "value kolom 8 "
+                                                                ,"kolom 9 " , "value kolom 9 " );
+                          </pre>
+                          <p>Untuk hapus data dapat menggunakan method delete(), sebagai contoh</p>
+                           <pre class="brush: html">
+                              public function deleteData()
+                              {
+                                $result_value = $this->checkId("kolom primary key","nama tabel","where kolom primary key","value kolom primary keu");
+                                if (! $result_value){ return false && exit; }
+
+                                $result = $this->delete("nama tabel","kolom primary key","value primary key");
+                                return $result ? true : false;
+                              }
+                              </pre>
+                              <p> untuk method delete(), maksimal parameter yaitu 4, contoh</p>
+                               <pre class="brush: html">
+                            $result = $this->delete("nama tabel","kolom primary key 1","value primary key 1"
+                                                                ,"kolom unique key 2","value unique key 2",
+                                                                  ,"kolom unique key 3","value unique key 3"
+                                                                    ,"kolom unique key 4","value unique key 4");
+                            return $result ? true : false;
+                          </pre>
+                           <hr><hr>
+                           <p> Untuk menggunakan Query bebas, anda bisa gunakan method CUD(), sebagai contoh</p>
+                             <pre class="brush: html">
+                            public function createData(){
+                              $this->setQuery("insert into t_user("username","email") VALUES ('contoh','contoh@gmail.com')");
+                              $result = $this->CUD();
+                            }
+                            public function updateData(){
+                              $this->setQuery("update t_user set username='abc',email='abc' where id_user=12");
+                              $result = $this->CUD();
+                            }
+                            public function deleteData(){
+                              $this->setQuery("delete from t_user where id_user=12");
+                              $result = $this->CUD();
+                            }
+                          </pre>
+                          <hr>
+                          <p> Berikut method-method yang diturunkan dari parent elDB</p>
+                             <pre class="brush: html">
+                          /*
+                          *  Method Dari Parent elDB MySqli
+                          *
+                          *  -> setQuery()   < Wajib Periksa Petik Satu >
+                          *     # getCount()   = mengembalikan jumlah data
+                          *     # getData()    = mengembalikan data yang diinginkan
+                          *     # getAllData() = mengembalikan seluruh data
+                          *
+                          *  -> insert()     = insert data < Tidak Perlu Periksa Petik Satu >
+                          *  -> update()     = update data < Tidak Perlu Periksa Petik Satu >
+                          *  -> delete()     = delete data < Tidak Perlu Periksa Petik Satu >
+                          *
+                          *  -> checkId()    = check data berdasarkan id primary key
+                          *
+                          *  -> CUD()        = method query bebas , insert update dan delete
+                          */
+
+                          </pre> <p>
+                          Pada method <font color="blue">getCount(),getData(), getAllData() dan CUD()</font>,
+                          harus memasukkan query terlebih dahulu dengan method <font color="green">setQuery()</font>,
+                          dan periksa input user secara manual seperti petik satu ', #hastag, <?php, dll.</p>
+                          </hr> </hr><p>
+                          Pada method <font color="blue">insert(),update(), delete() dan checkId()</font>,
+                          tidak membutuhkan method setQuery(), dan untuk petik satu ', sudah otomatis,
+                          anda hanya tinggal periksa string yang lain seperti #hastag, <?php, dll.</p>
+
+<hr>
+
+                        <p>
+                          Untuk memasukkan model kedalam Router, dapat menggunakan cara seperti ini
+                        </p>
+                        <pre class="brush: html">
+                            GF::Route("contoh-memasukkan-model",function(){
+                                 $obj = GF::Model("Model-Satu");
+                            });
+                        </pre>
+                        <p>atau langsung membuat object baru</p>
+                         <pre class="brush: html">
+                            GF::Route("contoh-memasukkan-model",function(){
+                                 $obj = new Data_User();
+                            });
+                        </pre>
+                        <div class="intro2 clearfix">
+                            <p>Berikut ini adalah cara untuk mengelola data kedatabase menggunakan PDO </p>
+                         
+                        </div>
+                        <p>
+                          Pertama membuat class terlebih dahulu, extends elDB,lalu masukkan attribut
+                        </p>
+                        <pre class="brush: html">
+                          private $id_user;
+                          private $username;
+                          private $email;
+                          private $password;
+                        </pre>
+                        <hr>
+                        <p>Contoh menambahkan data</p>
+                        <pre class="brush: html">
+                            public function addData()
+                            {
+                              self::beginTransaction();
+                              self::query('insert into t_user(username,email,pass) VALUES(:username, :email, :pass)');
+
+                              self::bind(':username', $this->username);
+                              self::bind(':email',  $this->email);
+                              self::bind(':pass',   $this->password);
+
+                              $r = self::execute();
+                              self::endTransaction();
+                              return $r;
+                            }
+                        </pre>
+                        <p>Conth mengubah data</p>
+                <pre class="brush: html">
+                    public function updateData()
+                    {
+                      self::query('update t_user set username=:username,email=:email,pass=:pass where id_user=:id_user');
+                      self::bind(':id_user',   $this->id_user );
+                      self::bind(':username',  $this->username );
+                      self::bind(':email',     $this->email );
+                      self::bind(':pass',      $this->password );
+                      $r = self::execute();
+                      return $r;
+                    }
+                </pre>
+                <p>Contoh menghapus data</p>
+  <pre class="brush: html">
+    public function deleteData()
+  {
+    self::query('delete from t_user where id_user=:id_user');
+    self::bind(':id_user', $this->id_user);
+    $r= self::execute();
+    return $r;
+  }
+
+  </pre>
+  <p>
+    Contoh mendapatkan data single dari tabel
+  </p>
+  <pre class="brush: html">
+    public function getDataUserSingle()
+    {
+      self::query("SELECT username FROM t_user WHERE username = :username limit 10");
+      self::bind(':username', $this->username);
+      $row = self::single();
+      return $row;
+    }
+  </pre>
+<p>
+  Contoh mendapatkan semua data dari tabel
+</p>
+ <pre class="brush: html">
+   public function getAllUser()
+  {
+    self::query('SELECT * FROM t_user limit 20');
+    $row = self::resultset();
+    return $row;
+  }
+  </pre>
+
+
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line5" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">6. Cara Membuat Controller<a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <p> Untuk mengalihkan route kedalam controller, sebagai contoh class User_Controller</p>
+                            </div>
+
+                          
+                            <pre class="brush: html">
+                              class User_Controller
+                              {
+                                  function __construct()
+                                  {
+                                      $this->login();
+                                  }
+
+                                  public function login(){
+                                      echo "User Login";
+                                  }
+                              }
+                          </pre>
+                          Dan untuk memanggil class User_Controller diatas didalam route contoh <font color="blue">"localhost/GF/example" </font>
+                          <pre class="brush: html">
+                              GF::Route("example",function(){
+                                  $user = new User_Controller();
+                              });
+                          </pre>
+                          atau seperti berikut
+                          <pre class="brush: html">
+                            GF::RouteToController("example","User_Controller");
+                          </pre>
+                          maka kedua kode ditas akan memanggil constructor secara otomatis,
+                          atau bisa juga seperti ini
+                          <pre class="brush: html">
+                            GF::RouteToController("example","User_Controller","login");
+                          </pre>
+                          akan memanggil function login didalam class User_Controller </br>
+                            Atau menggunakan callback function
+                            <pre class="brush: html">
+                              GF::RouteToController("example","User_Controller",function($obj){
+                                    $obj->login();
+                              });
+                            </pre>
+                             Untuk memanggil view didalam controller,
+                        pertama harus mendeklarasikan namespace 'use System\GF_Router as GF',
+                        contoh
+                        <pre class="brush: html">
+                          use System\GF_Router as GF;
+
+                              class User_Controller
+                              {
+
+                                function __construct()
+                                {
+                                    $this->login();
+                                    GF::setView("login");
+                                }
+
+                                public function login(){
+                                  echo "User Login";
+                                }
+                          }
+                        </pre>
+                          Maka pada saat Controller dipanggil akan memanggil function login dan mengalihkan kehalaman view "login";
+                           <hr>
+                        <code>
+                          <font color="red">Contoh Salah -> GF::Controller("example/{ a } / { b }"), Method Controller tidak dapat dimasukkan parameter seperti Route</font>
+                        </code>
+                            <!-- end col -->
+
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line6" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">7. Cara Membuat View<a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                               <p> Untuk membuat view pada lokasi <font color="red">"app/view/contoh.php"</font> GF akan otomatis mencari
+                            ekstensi .php dan .html, jika .php tidak ditemukan maka akan mencari .html
+                          </p>
+                            </div>
+
+                           <pre class="brush: html">
+                            GF::setView("contoh");
+                          </pre>
+                          atau file diletakkan didalam folder, sehingga
+                          <pre class="brush: html">
+                              GF::setView("folder_user/contoh");
+                          </pre>
+                          dan untuk mengekstrak variabel dari array gunakan kode seperti berikut
+
+                          <pre class="brush: html">
+                                $data_array['username'] = "abcdef";
+                                $data_array['email']    = "abcdef@gmail.com";
+                                GF::setView("contoh",$data_array);
+                          </pre>
+       atau mengekstrak variabel dari 2 array gunakan kode seperti berikut
+                          <pre class="brush: html">
+                                $data_array['username'] = "abcdef";
+                                $data_array['email']    = "abcdef@gmail.com";
+
+                                $result['login'] = true;
+                                GF::setView("contoh",$data_array,$result);
+
+                          </pre>
+
+                          Untuk menambahkan halaman statis file bisa menggunakan kode seperti berikut
+                          <pre class="brush: html">
+                            GF::setHead("template/head");
+                            GF::setView("contoh-satu");
+                          </pre>
+                          Maka penjelasan kode diatas, akan memasukkan file di "app/view/template/head.php" sebelum memasukkan file
+                          "app/view/contoh-satu.php".
+                          </br>
+                          Lihat contoh di Router Empat
+                            <!-- end col -->
+
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line7" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">8. NameSpace Framework<a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                           
+                            <div class="col-md-8">
+                               <p>
+                          Namespace yang digunakan untuk framework ini adalah :
+                        </p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                                   <pre class="brush :html">
+                              // Name space untuk Router
+                              use System\GF_Router as GF;
+
+                              // Name space untuk File
+                              use System\GF_File as File;
+
+                              // Name space untuk uplaod file gambar maupun semua jenis file
+                              use System\GF_Upload as Upload;
+
+                              // Name space untuk request POST form input, lihat contoh di router-empat
+                              use System\GF_Post as Req;
+
+                              // Name space untuk Json
+                              use GF_Text\JSON_Generator as Json;
+
+                        </pre>
+                        Bila anda belum paham apa itu Namespace, lihat <a href="http://php.net/manual/en/language.namespaces.php" target="_blank">di sini </a>
+
+
+                        <div class="row">
+                            
+
+                          
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+
+                       <section id="line8" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">9. Library <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                              
+                              Libary yang tersedia di framework ini adalah : 
+
+                              <p>1. Server Side (PHP)</p>
+                              <ul>  
+                                <li>- <a href="https://github.com/PHPMailer/PHPMailer/">PHP Mailer </a></li>
+                                <li>- <a href="http://phpqrcode.sourceforge.net/">QR Code Generator</a> </li>
+                                <li>- Captcha </li>
+                                <li>- <a href="http://www.fpdf.org/">FPdf</a></li>
+                                <li>- <a href="http://mobiledetect.net/">Mobile Detect</a> </li>
+                              </ul>
+                               <p>2.  Client Side (CSS)</p> 
+                                <ul>  
+                                  <li>- <a href="http://getbootstrap.com/">Bootstrap </a></li>
+                                  <li>- <a href="http://materializecss.com/">Materealize </a> </li>
+                                  <li>- <a href="http://getskeleton.com/">Skleton</a> </li>
+                                </ul>
+                              <p>3.  Client Side (Javascript)</p> 
+                                <ul>  
+                                  <li>- <a href=" https://jquery.com/">Jquery </a></li>
+                                  <li>- <a href="https://github.com/lamhotsimamora/GF-Javascript">GF-1.js </a> </li>
+                                  <li>- <a href="https://vuejs.org/v2/guide/">Vue </a> </li>
+                                  <li>- <a href="http://knockoutjs.com/documentation/introduction.html">Knockout </a> </li>
+                                  <li>- <a href="http://t4t5.github.io/sweetalert/">Sweet Alert </a> </li>
+                                  <li>- <a href="http://hammerjs.github.io/">Hammer </a> </li>
+                                </ul>
+                                  <p>3.  Tambahan</p> 
+                                <ul>  
+                                  <li>- <a href="http://ckeditor.com/">CKEditor </a> </li>
+                            
+                                </ul>
+
+                           
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line9" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">9. Tambahan<a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                        
+                        <p>
+                        Untuk custom string anda bisa gunakan method dibawah ini 
+                        (lihat contoh di Router-Delapan), 
+                        fungsi dari custom string ini yaitu untuk membuat filter pada string yang diterima, misal jika ingin menangkap input dari user hanya number atau angka maka gunakan _setNumber(), atau jika hanya ingin alfabet saja dari A sampai Z gunakan _setAlfabet()</p>
+
+                            <pre class="brush: html">
+                                $name   =  _setAlfabet($get['name']) ?? false;
+                                $email  =  _setCustomString($get['email'],"a-zA-Z0-9@.") ?? false;
+                                $phone  =  _setNumber($get['phone']) ?? false;
+                            </pre>
+                             <li>
+                              Helper bawaan dari GF Pro bisa dilihat di "System/GF_Helper.php", disana terdapat beberapa function yang siap digunakan</li> </br>
+                                <li>  Untuk template HTML anda bisa menggunakan cara saya, atau bisa juga kustom sendiri, atau gunakan cara anda seperti biasanya. contoh saya menggunakan front end bootstrap , jquery , dan GF-1.js,  Lihat lokasi file di "System/GF_HTML.php"
+                                </li>
+                               
+                                  Contoh template HTML yang saya gunakan, untuk mepersingkat kode :
+                                  <pre class="brush: html">
+                                    // Membuat Object
+                                    $me = new Template_HTML;
+
+                                    // Membuat Judul HTML
+                                    $me->setTitle("Home");
+
+                                    /*
+                                    * Memasukkan Informasi Meta image,author,title,description,name,copyright
+                                    */
+
+                                    $meta_html['image']     = 'example.png';
+                                    $meta_html['author']    = 'Lamhot Simamora';
+                                    $meta_html['title']     = 'Home';
+                                    $meta_html['description']   = 'Garuda Framework Pro';
+                                    $meta_html['name']          = 'Garuda Framework Pro';
+                                    $meta_html['copyright']     = 'Copyright@2017 All Right Reserved';
+
+                                    // Menyimpan Meta
+                                    $me->setMeta($meta_html);
+                                    // Memasukkan CSS jika ada
+                                    $me->setCSS("");
+                                    // Mengeluarkan hasil / output
+                                    $me->render();
+
+                                    // dan terakhir penutup HTMl
+                                    _closeBody();
+
+                                  </pre>
+                                
+                                <li>  Untuk mengatur nama folder / direktori berada  pada "System/GF_Path.php"
+                                </li>
+                                <li>  Untuk mengalihkan ke halaman 404 page not found anda bisa menggunakan method berikut ini
+                                </li>
+                                  <pre class="brush: html">
+                                      GF::errorPage();
+                                  </pre>
+                                
+                                <li>  Untuk mendirect ke halaman tertentu anda bisa gunakan code <font color="red">GF::directTo('Test'); </font> sama dengan
+                                  <font color="red"> header('Location: http://www.example.com/Test'); </font> 
+                                  </li>
+
+                                <li> Untuk library bawaan terdapat FPDF, QRCode, Mobile Detect dan PHP Mailer, sebagai contoh bisa dilihat di file 'app/router/Router-Satu.php'
+                                </li>
+                                <li> Untuk penggunaan Javascript AJAX saya menggunakan GF-1.js, anda bisa menggunakan JQuery atau library yang lain, jika ingin melihat tutorial
+                                GF-1.js bisa dilihat di <a href="https://github.com/lamhotsimamora/GF-Javascript" target="_blank">click</a> </li></br>
+                                
+                                <li>
+                                  Selalu sertakan code berikut ini disetiap halaman, Router, Controller, Model ataupun View.
+                                  Letakkan code di bagian paling atas.
+                                  <code>defined('sys_run_app') OR exit('403 You dont have permission to access / on this server...');</code>
+                                </li>
+
+                                  <pre class="brush: html">
+                                      <?php defined('sys_run_app') OR exit('403 You dont have permission to access / on this server...'); ?>
+                                </pre>
+                              
+                                <li>
+                                  Setiap menambahkan direktory baru ! Apabila file index.php atau index.html tidak dibuat atau tidak digunakan, buat file index.php atau index.html, agar direktory tidak dapat di lihat. Maka buatlah file index.html atau index.php
+
+                                </li>
+                             
+                                <li>
+                                  Jika parameter URL tidak cocok dengan Router, maka akan otomatis dialihkan kehalaman "404.html"
+                                </li>
+                                <li>
+                                   Untuk halaman "404.html" dan "Maintenance.html", anda dapat lihat lokasinya di "app/view/error/"
+                                </li>
+
+                                <li>
+                                  Jika anda upload framework ini kehosting dan menggunakan HTTPS, maka pada bagian htaccess, menjadi seperti ini
+                                </li>
+                                <pre class="brush: html">
+                                  RewriteEngine On
+                                  RewriteCond %{HTTPS} !on
+                                  RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+                                  RewriteCond %{REQUEST_FILENAME} !-f
+                                  RewriteCond %{REQUEST_FILENAME} !-d
+                                  RewriteRule ^(.+)$ index.php?p=$1 [QSA,L]
+
+                                </pre>
+
+                                <li>
+                                  Untuk membuat API sederhana, anda dapat melihat contohnya dihalaman Router Satu
+                                </li>
+
+                               <li>
+                                  Untuk upload file, jenis file yang tidak diizinkan untuk diupload bisa dikustom,
+                                  lihat lokasinya di app/GF_System/ , dibagian class GF_File , cari kode seperti dibawah
+
+                               </li>
+                               <pre class="brush: html">
+                             private static $danger_file = array('.html','.php','.js','.exe','.php5','.php7','.htaccess');
+                               </pre>
+                               Untuk upload semua jenis file, anda bisa memasukkan jenis file apa yang tidak dapat diupload, dengan cara seperti
+                               berikut (Lihat contoh di Router-Dua)
+
+                               <pre class="brush: html">
+                                 $file_format = array(".exe",".js",".txt");
+                                  Upload::setDangerFile($file_format);
+                                </pre>
+                               Dan hal yang sama jika ingin upload untuk gambar, masukkan array kedalam method. (lihat contoh di Router-Lima)
+                                <pre class="brush: html">
+                                      $image_format = array(".png",".jpg",".gif");
+                                      Upload::setImageOnly($image_format);
+                                </pre>
+                                 <li>
+                                  Untuk membuat session menggunakan namespace use System\GF_Router as GF; lihat contoh berikut
+                               </li>
+                              <pre class="brush: html">
+                                use System\GF_Router as GF;
+
+                                /**
+                                 * Membuat session baru
+                                 * @paramater {[key]}{[value]}
+                                 * return boolean
+                                 */
+                                GF::newSession("key","value");
+
+                                /**
+                                 * Mengecheck session apakah ada atau tidak
+                                 * @paramater {[key]}
+                                 * return boolean
+                                 */
+                                GF::checkSession("key");
+
+                                 /**
+                                 * Mendapatkan semua session yang ada
+                                 * return array 
+                                 */
+                                GF::getAllSession();
+
+                                /**
+                                 * Mendapatkan session
+                                 * @paramater {[key]}
+                                 * return value 
+                                 */
+                                GF::getSession("key");
+
+                                
+                                /**
+                                 * Menghapus session
+                                 * @paramater {[key]}
+                                 * return boolean
+                                 */
+                                GF::destroySession("key");
+
+                                </pre>
+                                 <li>
+                                  Untuk membuat cookie sama halnya dengan session harus menggunakan namespace use System\GF_Router as GF; lihat contoh berikut
+                               </li>
+                                 <pre class="brush: html">
+                                use System\GF_Router as GF;
+
+                                /**
+                                 * Membuat cookie baru, anda bisa mengatur waktu cookie pada bagian parameter limit_time, contoh untuk membuat cookie dalam 2 hari
+                                 * @paramater {[key]}{[value]}{[limit_time]}
+                                 * return boolean
+                                 */
+                                GF::newCookie("key","value",2);
+
+                                /**
+                                 * Jika parameter limit_time di kosongkan, maka default adalah 1 hari
+                                 */
+                                GF::newCookie("key","value");
+
+                                /**
+                                 * Mendapatkan semua cookie yang ada pada aplikasi anda, Bukan pada komputer client
+                                 * return boolean
+                                 */
+                                GF::getAllCookie();
+
+                                 /**
+                                 * Mendapatkan cookie
+                                 * @paramater {[key]}
+                                 * return boolean
+                                 */
+                                GF::getCookie("key");
+
+                                 /**
+                                 * Menghapus cookie
+                                 * @paramater {[key]}
+                                 * return boolean
+                                 */
+                                GF::destroyCookie("key");
+
+
+                                </pre>
+                                <li>
+                                  
+                                </li>
+                                  <li>
+                                    Untuk contoh penggunaan PDO lebih lengkap, lihat di Router 10 dan Model Empat.
+                                  </li>
+                                  <li>
+                                    Dan untuk penggunaan function atau pun lainnya, anda bisa lihat di Router yang tersedia. 
+                                    Karena yang dijelaskan di dokumentasi hanyalah bagian yang terpenting. 
+
+                                  </li>
+<hr>
+                                  <li>
+                                    <strong>
+                                    <code>
+                                      
+                                  
+                                      Kekurangan Garuda Framework Pro : </br>
+                                      
+                                        - Belum tersedia konfigurasi penggunaan Facebook Graph & Twitter Card</br>
+                                        - Belum tersedia sistem cache</br>
+                                        - Error handling masih sederhana</br>
+                                        - support PDO tapi hanya MySql database</br>
+
+  </code>
+                                    </strong>
+                                  </li>
+                                <hr>
+                                <hr>
+
+                                        <div class="intro2 clearfix">
+                                    
+                                        <center>
+                                    
+                                       <h3>SEKIAN DOKUMENTASI | SALAM VAR DUMP !</h3>
+                                    </center>
+
+                                        </div>
+
+                        
+                        </div>
+
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+        
+              
+                    
+                    <!-- end section -->
+                </div>
+                <!-- // end .col -->
+
+            </div>
+            <!-- // end .row -->
+
+        </div>
+        <!-- // end container -->
+
+    </div>
+    <!-- end wrapper -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+
+    <!-- CUSTOM PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/syntax-highlighter/scripts/shCore.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+
+</body>
+
+</html>
