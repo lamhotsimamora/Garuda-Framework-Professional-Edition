@@ -1,3 +1,9 @@
+
+<div style="text-align:center">
+<center>
+<img src="https://lamhotsimamora.github.io/Garuda-Framework-Professional-Edition/Garuda-Framework-Pro-Edition-Logo-Official.png">
+</img></center>
+</div>
 # Garuda-Framework-Professional-Edition
 # A Framework PHP Professional Edition | Made In Indonesia
 
