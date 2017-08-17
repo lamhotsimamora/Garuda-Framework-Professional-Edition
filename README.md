@@ -1,7 +1,7 @@
 
 <div style="text-align:center">
 <center>
-<img src="https://lamhotsimamora.github.io/Garuda-Framework-Professional-Edition/Garuda-Framework-Pro-Edition-Logo-Official.png">
+<img src="https://lamhotsimamora.github.io/Garuda-Framework-Professional-Edition/merdeka.png">
 </img></center>
 </div>
 
