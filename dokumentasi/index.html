@@ -292,8 +292,8 @@
                      
                       c). Konfigurasi selanjutnya yaitu informasi database server
                      
+                            
                              <section id="line-config-database">
-
                             <pre class="brush: html">
                                   $config_database  = array(
                                                     'server_name'    => 'localhost',
@@ -301,6 +301,7 @@
                                                     'database_name'  => 'db_gf',
                                                     'password'       => ''
                                                                            );
+                            </section>
                             </pre>
                              <p> d). Konfigurasi selanjutnya yaitu, jika mengaktifkan <font color="red">multi_languange</font>, secara default maka bahasa yang terpilih adalah 'ind'
                             pada bagian 'default_value_languange' </p>
@@ -389,7 +390,7 @@
                             </pre>
                             Isi array diatas adalah nama dari file model pada <font color="red">"app/model/nama_model.php"</font>.
                           
-                    </section>
+                    
                     <!-- end section -->
 
                     <section id="line3" class="section">
@@ -814,6 +815,10 @@
     return $row;
   }
   </pre>
+  <hr>
+
+
+  
 
 
                         </div>
@@ -1145,6 +1150,49 @@
                                 
                                 <li>  Untuk mengatur nama folder / direktori berada  pada "System/GF_Path.php"
                                 </li>
+                                <pre class="brush: html">
+$GF_PATH    = array(
+          'GF_DIR_NAME'     => substr(dirname($_SERVER['PHP_SELF']),strrpos(dirname($_SERVER['PHP_SELF']),'/') + 1), 
+          /*
+          * Nama File
+          */
+          'GF_System'       => 'GF_System',
+          'GF_Text'         => 'GF_Text',
+          'GF_Production'   => 'GF_Production',
+          'GF_Helper'       => 'GF_Helper',
+          'GF_Image_Error'  => 'GF-error',
+          'GF_Anonymous'    => 'GF_Anonymous',
+          'GF_Html'         => 'GF_HTML',
+          'GF_Index'        => 'index',
+          'GF_Interface'    => 'GF_Interface',
+          'GF_404'          => '404',
+          'GF_Abstract'     => 'GF_Abstract',
+          'GF_CMD'          => 'GF_Command_Prompt',
+          
+          /*
+          *  Nama Direktori
+          */
+          'GF_Config_DIR'     => 'config/',
+          'GF_System_DIR'     => 'system/',
+          'GF_Storage_DIR'    => 'storage/',
+          'GF_APP_DIR'        => 'app/',
+          'GF_Router_DIR'     => 'router/',
+          'GF_Controlelr_DIR' => 'controller/',
+          'GF_Helper_DIR'     => 'helper/',
+          'GF_Library_DIR'    => 'library/',
+          'GF_Model_DIR'      => 'model/',
+          'GF_DB_DIR'         => 'database/',
+          'GF_Config_DIR'     => 'config/',
+          'GF_Language_DIR'   => 'language/',
+          'GF_View_DIR'       => 'view/',
+          'GF_External_DIR'   => 'external',
+
+          'GF_Error_View'     =>  'error/',
+          'GF_Image_Base64'   =>  'image-base-64/'
+    =);
+                                </pre>
+
+
                                 <li>  Untuk mengalihkan ke halaman 404 page not found anda bisa menggunakan method berikut ini
                                 </li>
                                   <pre class="brush: html">
@@ -1317,7 +1365,81 @@
                                   <li>
                                     Untuk penggunaan captcha, anda bisa menggunakan captcha bawaan garuda framework, bisa dilihat contohnya di Router-Sembilan
                                   </li>
-<hr>
+
+                                  <li style="color:blue">
+                                      Garuda Framework sudah support dengan SQlite 3, anda bisa menggunakan multi database sekaligus, mysql dan sqlite, 
+                                      Untuk contoh selengkapnya lihat di Router-Satu. 
+                                      Lokasi file "app/config/database/sqlite.php"
+                                  </li>
+    <p>
+    <small style="color:red">*new</small>
+    Contoh  menggunakan database SQLite, menampilkan data dari tabel "t_user"
+  </p>
+<pre class="brush: html">
+  // Memasukkan path / lokasi database
+  $path = __EXTERNAL_DIR__."my_db.db";
+  
+  // Membuat objek baru
+  $db = new GF_SQLite($path);
+  
+  // Memasukkan query untuk menampilkan data
+  $db->setQuery("select * from t_user");
+  
+  // Memanggil function getAllData 
+  $r = $db->getAllData();
+  
+  // Mengeluarkan hasil dalam bentuk JSON
+  echo json_encode($r);
+
+  $db->close();
+
+</pre>
+
+<p>
+  Contoh menggunakan database SQLite, memasukkan data ke tabel "t_user"
+</p>
+<pre class="brush: html">
+   // Memasukkan path / lokasi database
+  $path = __EXTERNAL_DIR__."my_db.db";
+  
+   // Membuat objek baru
+  $db = new GF_SQLite($path);
+  
+
+  $username = _randomStr(9);
+  $email   = _randomStr(4)."@"._randomStr(3).".com";
+  
+  $r = $db->insert("t_user","username",$username
+                            ,"email",$email);
+
+  var_dump($r);
+
+  $db->close();
+</pre>
+
+<p>
+  Contoh menggunakan database SQLite, membuat tabel baru "t_company"
+</p>
+
+<pre class="brush: html">
+  $path = __EXTERNAL_DIR__."my_db.db";
+  $o = new GF_SQLite($path);
+
+  $r = $o->CUD("CREATE TABLE t_company (ID INT PRIMARY KEY NOT NULL, NAME TEXT NOT NULL, ADDRESS CHAR(50))");
+
+  var_dump($r);
+
+  $o->close();
+</pre>
+
+</br>
+<strong>
+  Selengkapnya lihat contoh di Router-Satu
+</strong>
+
+
+</br></br></br>
+                <hr>
                                   <li>
                                     <strong>
                                     <code>
