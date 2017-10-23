@@ -1013,6 +1013,9 @@
                               // Name space untuk Captcha Generator Penjumlahan
                               use GF_Text\Captcha_Generator_Sum as Captcha_Two;
 
+                              // Name space untuk XML (Membaca file xml)
+                              use GF_Text\GF_Xml as XML;
+
                         </pre>
                         Bila anda belum paham apa itu Namespace, lihat <a href="http://php.net/manual/en/language.namespaces.php" target="_blank">di sini </a>
 
@@ -1432,10 +1435,48 @@ $GF_PATH    = array(
 
   $o->close();
 </pre>
-
-</br>
 <strong>
   Selengkapnya lihat contoh di Router-Satu
+</strong>
+</br>
+</br>
+<p>
+  Contoh parse XML dari sebuah file 
+</p>
+<pre class="brush: html">
+// Name space untuk XML
+use GF_Text\GF_Xml as XML;
+
+$file = __EXTERNAL_DIR__."example.xml";
+
+  /**
+   * Membuat object baru
+   * @var XML
+   */
+  $o = new XML();
+
+  /**
+   * Memasukkan file XML, atau bisa juga dari URL 
+   */
+  $o->setXml($file);
+
+  /**
+   * Parse XML
+   */
+  $o->parseXml();
+
+  // $o->getPath();
+  // $o->getContent();
+  // $o->getXml();
+
+  /**
+   * Mengambil hasil parse XML, dalam bentuk JSON
+   */
+  echo $o->getJson();
+</pre>
+
+<strong>
+  Selengkapnya lihat contoh di Router-Tiga
 </strong>
 
 
