@@ -15,7 +15,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
 
-    <title>Dokumentasi Garuda Framework Pro Edition 5.5</title>
+    <title>Dokumentasi Garuda Framework Pro Edition 6.0</title>
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -52,7 +52,7 @@
                     <div class="col-md-12">
                         <div class="big-title text-center">
                             <h1>Dokumentasi Garuda Framework Pro Edition</h1>
-                            <p class="lead">Stable Version 5.5</p>
+                            <p class="lead">Stable Version 6.0</p>
                         </div>
                         <!-- end title -->
                     </div>
@@ -96,8 +96,9 @@
                                         <div class="intro">
                                              <ul>
                                                 <li><strong>Name              : Garuda Framework Professional Edition</strong></li>
-                                                <li><strong>Version           : 5.5 (Stable) </strong> </li>
+                                                <li><strong>Version           : 6.0 (Stable) </strong> </li>
                                                 <li><strong>Realease Date     : 20 Oktober 2017</strong>                                        </li>
+                                                <li><strong>Update Version    : 20 Oktober 2017</strong></li>
                                                 <li><strong>Author            : </strong> <a href="https://lamhotsimamora.com" target="_blank">Lamhot Simamora</a></li>
                                                 <li><strong>Email             : lamhotsimamora36@gmail.com </strong>
                                                 <li><strong>Web                : <a href="https://lamhotsimamora.com" target="_blank">www.lamhotsimamora.com</a></strong>
@@ -123,18 +124,16 @@
 
                                             <code>
                                         	Garuda Framework Professional untuk saat ini sudah mendukung 2 database : <br>
-                                            1. mySql <br>
-                                            2. Sqlite
+                                            1. MySql (Hanya dapat terhubung 1 database mysql ) </br>
+                                            2. Sqlite ( Dapat terhubung 2 database Sqlite )</br>
+                                            3. PostgreSql ( Dapat terhubung 2 database PostgreSql )
                                             </code>
                           
                                                <p>Berikut adalah Kebutuhan Sistem yang diperlukan : </p>          
                                             <h4>System Requirements</h4>
                                            
-                                        
-
                                             <div class="intro2 clearfix">
                                                  <p>
-                                                  <li>Segelas Susu / Secangkir Kopi, atau Teh Gelas </li>
                                                   <li>Server Lokal Seperti Xampp atau Wamp Server</li>
                                                   <li>Bahasa pemograman yang digunakan -> Minimal Menggunakan PHP 7.0 atau 7.1 (Rekomendasi)</li>
                                                   <li>Contoh Database Yang Digunakan Maria DB</li>
@@ -274,9 +273,11 @@
                             untuk DNS database microsoft access, sqlite, sql server, dan oracle , anda harus mencari sendiri. Dan di framework ini saya rekomendasikan menggunakan MySqli
                          </code>
                               <pre class="brush: html">
-                                    $class_database    = array('mysqli','pdo');
+                                   
+                                      $class_database    = array('mysqli','pdo','sqlite','postgresql');
 
-                                    $database_use      = array('mysql','microsoft_access','sqlite','sql_server','oracle');
+                                     $database_use       = array('mysql','sqlite','sqlserver','oracle');
+
                               </pre>
                          
                           <li> b). Konfigurasi selanjutnya yaitu</li>
@@ -392,7 +393,8 @@
                             , Untuk file Model yang tersedia hanya sebagai contoh</p>
 
                             <pre class="brush: html">
-                              $_model_app     = array('Model-Satu','Model-Dua',"Model-Tiga","Model-Empat");
+                              $_model_app     = array('Model-Satu','Model-Dua',"Model-Tiga","Model-Empat","Model-Lima","Model-Enam");
+
                             </pre>
                             Isi array diatas adalah nama dari file model pada <font color="red">"app/model/nama_model.php"</font>.
                           
@@ -595,13 +597,28 @@
                             <p>Berikut ini adalah cara untuk mengelola data kedatabase menggunakan MySQLI </p>
                          
                         </div>
-                        <p>Untuk mengecheck id dari tabel gunakan method checkId(),sebagai contoh</p>
+                        <p>Untuk mengecheck id dari tabel gunakan method checkId(), method ini sama dengan "select nama_field from nama_tabel where nama_field=value_field", 
+                          cocok digunakan untuk login kedalam sistem
+                          ,sebagai contoh (maximal 3 parameter)
+      
+                        </p>
                           <pre class="brush: html">
                           public function getId(){
-                            $result  = $this->checkId("nama kolom","nama tabel","colom primary key","value primary key");
+                            $result  = $this->checkId("nama kolom","nama tabel","colom primary key"
+                                                                               ,"value primary key" );
                             return $result ? true : false;
                           }
                           </pre>
+                          Sebagai contoh, query untuk dibawah ini adalah <font color="red">"select id_user from t_user where username='albert' and password='abcabc' limit 1"</font>, maka 
+                          penulisannya cukup seperti ini :
+                          <pre class="brush: html">
+                          public function getId(){
+                            $result  = $this->checkId("id_user","t_user","username","albert"
+                                                                        ,"password","abcabc");
+                            return $result ? true : false;
+                          }
+                          </pre>
+
                           <p> Untuk mendapatkan seluruh data gunakan method getAllData(), sebagai contoh</p>
                             <pre class="brush: html">
                            private function $data = array();
@@ -1162,44 +1179,45 @@
                                 </li>
                                 <pre class="brush: html">
 $GF_PATH    = array(
-          'GF_DIR_NAME'     => substr(dirname($_SERVER['PHP_SELF']),strrpos(dirname($_SERVER['PHP_SELF']),'/') + 1), 
+          'GF_DIR_NAME'       => substr(dirname($_SERVER['PHP_SELF'])
+                        ,strrpos(dirname($_SERVER['PHP_SELF']),'/') + 1), 
           /*
           * Nama File
           */
           'GF_System'       => 'GF_System',
-          'GF_Text'         => 'GF_Text',
-          'GF_Production'   => 'GF_Production',
+          'GF_Text'               => 'GF_Text',
+          'GF_Production'     => 'GF_Production',
           'GF_Helper'       => 'GF_Helper',
-          'GF_Image_Error'  => 'GF-error',
-          'GF_Anonymous'    => 'GF_Anonymous',
+          'GF_Image_Error'    => 'GF-error',
+          'GF_Anonymous'      => 'GF_Anonymous',
           'GF_Html'         => 'GF_HTML',
-          'GF_Index'        => 'index',
-          'GF_Interface'    => 'GF_Interface',
-          'GF_404'          => '404',
-          'GF_Abstract'     => 'GF_Abstract',
-          'GF_CMD'          => 'GF_Command_Prompt',
+          'GF_Index'              => 'index',
+          'GF_Interface'          => 'GF_Interface',
+          'GF_404'        => '404',
+          'GF_Query'            => 'GF_Query',
+          'GF_CMD'        => 'GF_Command_Prompt',
           
           /*
           *  Nama Direktori
           */
           'GF_Config_DIR'     => 'config/',
-          'GF_System_DIR'     => 'system/',
-          'GF_Storage_DIR'    => 'storage/',
+          'GF_System_DIR'         => 'system/',
+          'GF_Storage_DIR'      => 'storage/',
           'GF_APP_DIR'        => 'app/',
           'GF_Router_DIR'     => 'router/',
-          'GF_Controlelr_DIR' => 'controller/',
+          'GF_Controlelr_DIR'   => 'controller/',
           'GF_Helper_DIR'     => 'helper/',
           'GF_Library_DIR'    => 'library/',
-          'GF_Model_DIR'      => 'model/',
-          'GF_DB_DIR'         => 'database/',
-          'GF_Config_DIR'     => 'config/',
-          'GF_Language_DIR'   => 'language/',
-          'GF_View_DIR'       => 'view/',
-          'GF_External_DIR'   => 'external',
+          'GF_Model_DIR'          => 'model/',
+          'GF_DB_DIR'             => 'database/',
+          'GF_Config_DIR'         => 'config/',
+          'GF_Language_DIR'       => 'language/',
+          'GF_View_DIR'           => 'view/',
+          'GF_External_DIR'   => 'external/',
 
-          'GF_Error_View'     =>  'error/',
-          'GF_Image_Base64'   =>  'image-base-64/'
-    =);
+          'GF_Error_View'         =>  'error/',
+          'GF_Image_Base64'     =>  'image-base-64/'
+                            );
                                 </pre>
 
 
@@ -1482,7 +1500,34 @@ $file = __EXTERNAL_DIR__."example.xml";
 </pre>
 
 <strong>
-  Selengkapnya lihat contoh di Router-Tiga
+  Selengkapnya lihat contoh di Router-Satu dan Model Enam
+</strong>
+
+<hr>
+
+<p>
+  Contoh menggunakan database PostgreSql menampilkan data dari tabel "t_user"
+</p>
+
+<pre class="brush: html">
+  function __construct()
+  {
+    $this->obj = new GF_PostgreSql;
+    $this->obj->setConnection($this->server_info);
+    $this->obj->connect();
+  }
+
+  public function getAllDataUser()
+  {
+    $this->obj->setQuery("select * from t_user");
+    $this->obj->execute();
+
+    return $this->obj->getAllData();
+  }
+</pre>
+
+<strong>
+  Selengkapnya lihat contoh di Router-Tiga dan Model-Lima
 </strong>
 
 
