@@ -587,7 +587,7 @@
                            <p>Untuk mendapatkan jumlah data gunakan method getCount(), sebagai contoh</p>
                           <pre class="brush: html">
                               public function countData(){
-                                  $this->setQuery("select id_user,username,email,pass from t_user");
+                                  $this->setQuery("select id_user from t_user");
                                   $result = $this->getCount();
                                   return $result;
                               }
