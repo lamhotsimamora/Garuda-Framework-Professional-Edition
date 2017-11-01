@@ -625,10 +625,8 @@
                            public function getAll()
                            {
                              $this->setQuery("select id_user,username,email,pass from t_user order by id_user asc");
-
-                             $this->getAllData();
                              // return array
-                             return self::$store_data;
+                             return $this->getAllData();
                            }
                           </pre>
                           <p> Untuk insert data dapat menggunakan method insert(), sebagai contoh</p>
