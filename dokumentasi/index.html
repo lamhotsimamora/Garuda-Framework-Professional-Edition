@@ -123,10 +123,10 @@
                                             GF Pro ini yaitu <a href="https://www.chat.lamhotsimamora.com/login" target="_blank">Room Chat</a> dan <a href="https://s.lamhotsimamora.com/" target="_blank">Generator Short URL</a></p>
 
                                             <code>
-                                        	Garuda Framework Professional untuk saat ini sudah mendukung 2 database : <br>
+                                        	Garuda Framework Professional untuk saat ini sudah mendukung 3 database : <br>
                                             1. MySql (Hanya dapat terhubung 1 database mysql ) </br>
-                                            2. Sqlite ( Dapat terhubung 2 database Sqlite )</br>
-                                            3. PostgreSql ( Dapat terhubung 2 database PostgreSql )
+                                            2. Sqlite ( Dapat terhubung lebih dari 1 database Sqlite )</br>
+                                            3. PostgreSql ( Dapat terhubung lebih dari 1 database PostgreSql )
                                             </code>
                           
                                                <p>Berikut adalah Kebutuhan Sistem yang diperlukan : </p>          
@@ -470,14 +470,7 @@
                                 </pre>
 
                                 Untuk membuat view di callback function dapat dilihat pada line 4 diatas. </br>
-                                Contoh lainnya
-                                <pre class="brush: html">
-                                 GF::Route("Home",function(){
-                                    // logic here...
-
-                                    GF::setView("home");
-                                 });
-                                </pre>
+                                
                                 <hr>
                                 Untuk mengekstrak variabel kedalam view dengan 1 data array, sebagai contoh seperti berikut ini
                                 <pre class="brush: html">
@@ -1182,39 +1175,39 @@ $GF_PATH    = array(
           /*
           * Nama File
           */
-          'GF_System'       => 'GF_System',
-          'GF_Text'               => 'GF_Text',
+          'GF_System'         => 'GF_System',
+          'GF_Text'           => 'GF_Text',
           'GF_Production'     => 'GF_Production',
-          'GF_Helper'       => 'GF_Helper',
+          'GF_Helper'         => 'GF_Helper',
           'GF_Image_Error'    => 'GF-error',
           'GF_Anonymous'      => 'GF_Anonymous',
-          'GF_Html'         => 'GF_HTML',
-          'GF_Index'              => 'index',
-          'GF_Interface'          => 'GF_Interface',
-          'GF_404'        => '404',
-          'GF_Query'            => 'GF_Query',
-          'GF_CMD'        => 'GF_Command_Prompt',
+          'GF_Html'           => 'GF_HTML',
+          'GF_Index'          => 'index',
+          'GF_Interface'      => 'GF_Interface',
+          'GF_404'            => '404',
+          'GF_Query'          => 'GF_Query',
+          'GF_CMD'            => 'GF_Command_Prompt',
           
           /*
           *  Nama Direktori
           */
           'GF_Config_DIR'     => 'config/',
-          'GF_System_DIR'         => 'system/',
-          'GF_Storage_DIR'      => 'storage/',
+          'GF_System_DIR'     => 'system/',
+          'GF_Storage_DIR'    => 'storage/',
           'GF_APP_DIR'        => 'app/',
           'GF_Router_DIR'     => 'router/',
-          'GF_Controlelr_DIR'   => 'controller/',
+          'GF_Controlelr_DIR' => 'controller/',
           'GF_Helper_DIR'     => 'helper/',
           'GF_Library_DIR'    => 'library/',
-          'GF_Model_DIR'          => 'model/',
-          'GF_DB_DIR'             => 'database/',
-          'GF_Config_DIR'         => 'config/',
-          'GF_Language_DIR'       => 'language/',
-          'GF_View_DIR'           => 'view/',
+          'GF_Model_DIR'      => 'model/',
+          'GF_DB_DIR'         => 'database/',
+          'GF_Config_DIR'     => 'config/',
+          'GF_Language_DIR'   => 'language/',
+          'GF_View_DIR'       => 'view/',
           'GF_External_DIR'   => 'external/',
 
-          'GF_Error_View'         =>  'error/',
-          'GF_Image_Base64'     =>  'image-base-64/'
+          'GF_Error_View'     =>  'error/',
+          'GF_Image_Base64'   =>  'image-base-64/'
                             );
                                 </pre>
 
