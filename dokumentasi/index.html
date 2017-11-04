@@ -692,19 +692,19 @@
                             return $result ? true : false;
                           </pre>
                            <hr><hr>
-                           <p> Untuk menggunakan Query bebas, anda bisa gunakan method CUD(), sebagai contoh</p>
+                           <p> Untuk menggunakan Query bebas, anda bisa gunakan method execute(), sebagai contoh</p>
                              <pre class="brush: html">
                             public function createData(){
                               $this->setQuery("insert into t_user("username","email") VALUES ('contoh','contoh@gmail.com')");
-                              $result = $this->CUD();
+                              $result = $this->execute();
                             }
                             public function updateData(){
                               $this->setQuery("update t_user set username='abc',email='abc' where id_user=12");
-                              $result = $this->CUD();
+                              $result = $this->execute();
                             }
                             public function deleteData(){
                               $this->setQuery("delete from t_user where id_user=12");
-                              $result = $this->CUD();
+                              $result = $this->execute();
                             }
                           </pre>
                           <hr>
@@ -724,11 +724,11 @@
                           *
                           *  -> checkId()    = check data berdasarkan id primary key
                           *
-                          *  -> CUD()        = method query bebas , insert update dan delete
+                          *  -> execute()        = method query bebas , insert update dan delete
                           */
 
                           </pre> <p>
-                          Pada method <font color="blue">getCount(),getData(), getAllData() dan CUD()</font>,
+                          Pada method <font color="blue">getCount(),getData(), getAllData() dan execute()</font>,
                           harus memasukkan query terlebih dahulu dengan method <font color="green">setQuery()</font>,
                           dan periksa input user secara manual seperti petik satu ', #hastag, <?php, dll.</p>
                           </hr> </hr><p>
@@ -1444,7 +1444,7 @@ $GF_PATH    = array(
   $path = __EXTERNAL_DIR__."my_db.db";
   $o = new GF_SQLite($path);
 
-  $r = $o->CUD("CREATE TABLE t_company (ID INT PRIMARY KEY NOT NULL, NAME TEXT NOT NULL, ADDRESS CHAR(50))");
+  $r = $o->execute("CREATE TABLE t_company (ID INT PRIMARY KEY NOT NULL, NAME TEXT NOT NULL, ADDRESS CHAR(50))");
 
   var_dump($r);
 
