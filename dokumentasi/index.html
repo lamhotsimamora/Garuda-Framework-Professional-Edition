@@ -1121,6 +1121,42 @@
 
                         <div class="row">
                         
+                           <p>
+                          <g style="color:red">* new</g>   Untuk membuat API (application programming interface), maka bisa menggunakan contoh berikut ini :
+                           </p>
+                           <pre class="brush: html">
+                            <-?phpp
+                            use System\GF_Router as GF;
+ 
+                            // Gunakan method enabledApi() ini, untuk mengaktifkan mode API,
+                            // Agar URL kita bisa diakses oleh publik
+                            GF::enabledApi();
+                             
+                            GF::Route("API_USER",function(){
+                                echo "Route ini akan menjadi public, dapat diakses oleh publik";
+                            });
+                             
+                             
+                            // Sedangkan untuk mengembalikan seperti semula dalam artian menjadi private,
+                            // Gunakan method ini disabledApi()
+                            GF::disabledApi();
+                             
+                             
+                            GF::Route("profile",function(){
+                                echo "Route ini akan menjadi private, tidak dapat diakses oleh publik";
+                            });
+                            </pre>
+  <p>
+    Maka dengan begitu pada saat mengakses <strong>"www.example.com/API_USER"</strong>, maka dapat diakses oleh publik, karena header sudah 
+    di setting menjadi <strong>" Access Control Allow Origin: * "</strong>, sedangkan pada saat mengakses <strong>"www.example.com/profile"</strong>, maka hanya dapat diakses oleh 
+    domain itu saja karena sudah diatur headernya menjadi <strong>" Access Control Allow Origin: www.example.com/profile "</strong>
+    dan <strong>" Access-Control-Allow-Credentials: true "</strong>. 
+
+
+  </p>
+                           <hr>
+                        <hr>
+
                         <p>
                         Untuk custom string anda bisa gunakan method dibawah ini 
                         (lihat contoh di Router-Delapan), 
