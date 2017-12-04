@@ -15,7 +15,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
 
-    <title>Dokumentasi Garuda Framework Pro Edition 6.0</title>
+    <title>Dokumentasi Garuda Framework Pro Edition 6.1</title>
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -52,7 +52,7 @@
                     <div class="col-md-12">
                         <div class="big-title text-center">
                             <h1>Dokumentasi Garuda Framework Pro Edition</h1>
-                            <p class="lead">Stable Version 6.0</p>
+                            <p class="lead">Stable Version 6.1</p>
                         </div>
                         <!-- end title -->
                     </div>
@@ -96,9 +96,9 @@
                                         <div class="intro">
                                              <ul>
                                                 <li><strong>Name              : Garuda Framework Professional Edition</strong></li>
-                                                <li><strong>Version           : 6.0 (Stable) </strong> </li>
+                                                <li><strong>Version           : 6.1 (Stable) </strong> </li>
                                                 <li><strong>Realease Date     : 20 Oktober 2017</strong>                                        </li>
-                                                <li><strong>Update Version    : 29 Oktober 2017</strong></li>
+                                                <li><strong>Update Version    : 30 November 2017</strong></li>
                                                 <li><strong>Author            : </strong> <a href="https://lamhotsimamora.com" target="_blank">Lamhot Simamora</a></li>
                                                 <li><strong>Email             : lamhotsimamora36@gmail.com </strong>
                                                 <li><strong>Web                : <a href="https://lamhotsimamora.com" target="_blank">www.lamhotsimamora.com</a></strong>
@@ -129,14 +129,14 @@
                                             3. PostgreSql ( Dapat terhubung lebih dari 1 database PostgreSql )
                                             </code>
                           
-                                               <p>Berikut adalah Kebutuhan Sistem yang diperlukan : </p>          
+                                               <p>Berikut adalah spesifikasi sistem yang diperlukan : </p>          
                                             <h4>System Requirements</h4>
                                            
                                             <div class="intro2 clearfix">
                                                  <p>
                                                   <li>Server Lokal Seperti Xampp atau Wamp Server</li>
                                                   <li>Bahasa pemograman yang digunakan -> Minimal Menggunakan PHP 7.0 atau 7.1 (Rekomendasi)</li>
-                                                  <li>Contoh Database Yang Digunakan Maria DB</li>
+                                                  <li>Contoh Database Yang Digunakan Maria DB, SQLite dan PostgreSql</li>
                                                   <li>Browser bisa menggunakan Chrome / Firefox / atau dll </li>
                                                   <li>Editor bisa menggunakan Notepad++/ Sublime Text / VSCode / Atom / Vim / atau dll</li>
                                                 </p>
@@ -1012,7 +1012,7 @@
                               // Name space untuk File
                               use System\GF_File as File;
 
-                              // Name space untuk uplaod file gambar maupun semua jenis file
+                              // Name space untuk single/multiple upload file/gambar
                               use System\GF_Upload as Upload;
 
                               // Name space untuk request POST form input, lihat contoh di router-empat
@@ -1029,9 +1029,12 @@
 
                               // Name space untuk XML (Membaca file xml)
                               use GF_Text\GF_Xml as XML;
+	
+							   // Name space untuk encrypt decrypt Key Hash Iv
+                              use System\GF_Encrypt_Decrypt as Crypto;
 
                         </pre>
-                        Bila anda belum paham apa itu Namespace, lihat <a href="http://php.net/manual/en/language.namespaces.php" target="_blank">di sini </a>
+                        Bila anda belum paham apa itu namespace, lihat <a href="http://php.net/manual/en/language.namespaces.php" target="_blank">di sini </a>
 
 
                         <div class="row">
@@ -1120,7 +1123,148 @@
                         <!-- end row -->
 
                         <div class="row">
-                        
+	
+	<p>
+		<g style="color:red">* new</g> Contoh untuk membuat encrypt dengan Key dan Hash  (Lihat contoh lengkap di Router Lima)
+		<pre class="brush: html">
+
+use System\GF_Encrypt_Decrypt as Crypto;
+GF::Route("crypthograpy-php",function(){
+
+	/**
+	 * Hanya contoh jika ingin mengencrypt
+	 * String dengan menggunakan Key dan Hash
+	 */
+
+	$obj = new Crypto;
+
+	// Memasukkan secret key
+	$obj->setKey('My_Secret_Key_ABCD');
+
+	// Menentukan jenis Hash yang akan digunakan
+	// Jika ingin melihat semuah jenis Hash gunakan method ini
+	// $obj->getAllHash();
+	$obj->setHasType('tiger160,4');
+
+	// Memasukkan string yang akan diencrypt
+	$obj->setValue("Garuda Framework Professional Edition...");
+
+	$result = $obj->encrypt();
+
+	echo "Hasil Encrypt : ".$result."<hr>";
+
+	// ============================================
+	
+	$new_obj = new Crypto;
+
+	// Memasukkan secret key
+	$new_obj->setKey("My_Secret_Key_ABCD");
+
+	// Menentukan jenis Hash yang akan digunakan
+	// Jika ingin melihat semuah jenis Hash gunakan method ini
+	// $obj->getAllHash();
+	$obj->setHasType('tiger160,4');
+
+	// Memasukkan string yang akan didecrypt
+	$obj->setValue($result);
+
+
+	$result = $obj->decrypt();
+
+	echo "Hasil Decrypt : ".$result."<hr>";
+
+
+	echo "Key : My_Secret_Key_ABCD <hr>";
+	echo "Hash : tiger160,4<hr>";
+
+	echo "Semua jenis HASH : </br></br>";
+	echo json_encode($obj->getAllHash());
+});
+		</pre>
+	</p>
+	
+
+    						<p><g style="color:red">* new</g> Contoh upload multiple file (Lihat contoh lengkap di Router Lima)
+
+    						<pre class="brush: html">
+use System\GF_Upload as Upload;
+
+/**
+ * Contoh melakukan upload multiple
+ * localhost/GF/process-multiple-upload
+ */
+GF::Route("process-multiple-upload",function(){
+
+	if (isset($_FILES) && isset($_POST['submit']))
+	{
+		 /**
+		  * Function untuk mengaktifkan multi upload 
+		  */
+		 Upload::setMultipleUpload();
+
+		 /**
+		  * Apabila file yang akan diupload adalah gambar, maka aktifkan function ini
+		  * Upload::setImageOnly();
+		  */
+		
+		/**
+		 * Apabila file yang akan diupload adalah gambar, dan ingin dicompress, gunakan function ini
+		 * Upload::setCompressImage(50);
+		 */
+		
+
+		 /**
+		  * Untuk menentukan direktori tempat upload file (direktori akan otomatis dibuat jika ditemukan)
+		  * app/storage/multiple
+		  */
+		 Upload::setPath('multiple');
+		
+		 /**
+		  * Memasukkan nama-nama file yang akan diupload (jumlahnya harus sama dengan nama-nama dari form), jika ingin menggunakan nama 
+		  * file yang asli maka hapus function ini
+		  * @var array
+		  */
+		 $filename = array(
+		 				  _randomStr(5),
+		 				  _randomStr(5),
+		 				  _randomStr(5),
+		 				  _randomStr(5),
+		 				  _randomStr(5),
+		 				  _randomStr(5),
+		 				  _randomStr(5)
+		 				);
+		 Upload::setFileName($filename);
+
+		 /**
+		  * Memasukkan nama-nama dari form upload yang akan diupload
+		  * @var array
+		  */
+		 $data = array("file_1","file_2","file_3","file_4","file_5","file_6","file_7");
+		 Upload::setFileUpload($data);
+
+		 /**
+		  * Memasukkan maximum file upload
+		  * 1.3 MB
+		  */
+		 Upload::setMaxSize(1300000);
+
+		 /**
+		  * Melakukan upload
+		  * return array
+		  */
+		 $result = Upload::do();
+
+		 echo json_encode($result);
+	}else{
+		echo "404";
+	}
+});
+
+    						</pre>	
+    							
+    						</p>                    	
+	
+
                            <p>
                           <g style="color:red">* new</g>   Untuk membuat API (application programming interface), maka bisa menggunakan contoh berikut ini :
                            </p>
@@ -1571,7 +1715,8 @@ $file = __EXTERNAL_DIR__."example.xml";
                                         - Belum tersedia konfigurasi penggunaan Facebook Graph & Twitter Card</br>
                                         - Belum tersedia sistem cache</br>
                                         - Error handling masih sederhana</br>
-                                        - support PDO tapi hanya MySql database</br>
+                                        - Support PDO tapi hanya MySql database</br>
+                                        - Belum tersedia Migration</br>
 
   </code>
                                     </strong>
